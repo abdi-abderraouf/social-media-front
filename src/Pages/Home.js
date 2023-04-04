@@ -1,10 +1,26 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-    
+    const [connectedUser,setConnectedUser]=useState({});
+    const navigate=useNavigate();
+
+   const getConnectedUserData=()=>{
+       setConnectedUser(JSON.parse(localStorage.getItem('user_data')))
+       if(localStorage.getItem('user_data')===null){//user not connected
+        //redirection vers login
+           navigate('/Login');
+       }
+    };
+
+    useEffect(()=>{
+        
+        getConnectedUserData()
+    },[])
     return(
         <>
-            <h1> hello logged In</h1>
+            <h1> hello {connectedUser.firstname+'    '+connectedUser.lastname} </h1>
             
     
 
