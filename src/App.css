@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  
+}
+.register{
+ margin: 10vh auto;
+ width: 98vw;
+ height: 170vh;
+ border: 5px solid black;
+ overflow: hidden;
+ border-radius: 20px;
+ box-shadow: black;
+ display: flex;
+ background-color: #000;
+}
+.register-cover{
+background-image: url('../public/socialmedia.jpg');
+background-size: cover;
+width: 70%;
+height: 100%;
+background-color: #000;
+}
+.register-content{
+text-align: center;
+width: 30%;
+align-items: right;
+background-color: #000;
+ display:contents;
+ justify-content:right;
+height: 120%;
+background-color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
+.form {
+  background-color:black;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px;
+  width: 320px;
+  margin-left: 40px;
+
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
   pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
 }
 
-.App-link {
-  color: #61dafb;
+.input:focus ~ .placeholder {
+  color: #dc2f55;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+  background-color:#fff;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  height: 60px;
+  margin: 0px 0px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+  margin: 80px 0px 10px 0px;
+}
+
+.submit:active {
+  background-color: rgb(9, 62, 235);
+}
+
+
+.textarea{
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 60px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+  margin: 20 20px;
+}
+.cut {
+  background-color: black;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.textarea:focus ~ .cut,
+.textarea:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder  {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.textarea:focus ~ .placeholder,
+.textarea:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.textarea:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.textarea:focus ~ .placeholder {
+  color: #dc2f55;
+}
+.file{
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 80%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 60%;
+  margin: 0px 10px;
+  margin-right: 50px;
+}
+
+.picture{
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 10px;
+  height: 200%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 50%;
+  margin: 25px 25px;
+}
+.Date{
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 50%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 50%;
+  margin: 5px 25px;
+}
+
+.BirthDate{
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 10px;
+  height: 200%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 50%;
+  margin: 20px 20px;
+}
+
+.errors{
+  color: #dc2f55;
 }
