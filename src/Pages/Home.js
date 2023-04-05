@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +20,7 @@ const Home = () => {
     useEffect(()=>{
         
         getConnectedUserData()
-    },[])
+    },[getConnectedUserData])
     return(
         <>
             <h1> hello {connectedUser.firstname+'    '+connectedUser.lastname} </h1>
