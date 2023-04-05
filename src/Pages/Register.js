@@ -179,19 +179,7 @@ return(
           errors.bio!=''?<div className='errors'>{errors.bio} </div>:'bio'
         }</label>
       </div>
-      <div className="input-container ic2">
-      <label className='picture'> Picture</label>
-      <input
-        className="file"
-        type="file"
-        accept="image/*"
-        placeholder=" "
-        onChange={(event) => {
-          const file = event.target.files[0];
-          setPicture(file);
-        }}
-      />
-    </div>
+      
     
 
     <div className="input-container ic2">
