@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Components/Navbar';
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
     },[getConnectedUserData])
     return(
         <>
+        <Navbar/>
             <h1> hello {connectedUser.firstname+'    '+connectedUser.lastname} </h1>
             
 
